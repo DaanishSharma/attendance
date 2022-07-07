@@ -1,0 +1,8 @@
+flask
+python_arptable
+csv
+socket
+datetime
+pyqrcode
+pycopy-webbrowser
+

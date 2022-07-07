@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Register </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div align="center">
+        <div align="center" class="border">
+            <div class="header">
+                <h1 class="word">Mark Attendace</h1>
+            </div>
+
+            </br>
+            </br>
+            </br>
+            <h2 class="word">
+                <form action="{{ url_for('login') }}" method="post">
+                    <div class="msg">{{ msg }}</div>
+                    <input id="name" name="user" type="text" placeholder="Enter Your name" class="textbox" /></br>
+                    </br>
+                    <input id="rollno" name="rollno" type="text" placeholder="Enter Your rollno" class="textbox" /></br>
+                    </br>
+                    <input type="submit" class="btn" value="Sign Up"></br>
+                </form>
+            </h2>
+        </div>
+    </div>
+</body>
+
+</html>

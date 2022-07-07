@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <body>
+        <div align="center">
+            <div align="center" class="border">
+                <!-- <h1 class="word">Register</h1> -->
+                <picture>
+                    <h1>Scan It And Mark Attendance</h1>
+                    <img src="static/images/myqr.svg" alt="QR Code" style="width:auto;">
+                </picture>
+                </br>
+                </br>
+                </br>
+                <table>
+                    {% for row in msg %}
+                    <tr>
+                        <p>
+                            {% for col in row %}
+                            <td>{{ col }}</td>
+                            {% endfor %}
+                        </p>
+
+                    </tr>
+                    <br> {% endfor %}
+                </table>
+
+
+                <h2 class="word">
+                    <form action="{{ url_for('end') }}" method="GET">
+                        <input type="submit" class="btn" value="End And Save"></br>
+                    </form>
+                </h2>
+
+
+            </div>
+        </div>
+    </body>
+
+</body>
+
+</html>
